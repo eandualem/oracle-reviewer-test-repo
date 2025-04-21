@@ -54,8 +54,7 @@ def test_describe_operation():
 
 
 # Intentionally failing test to check test runner reports
-def test_intentionally_failing():
-    """This test is designed to fail."""
-    print("Running intentionally failing test...")  # Add print to see in output
-    assert add(2, 2) == 5, "This assertion should fail!"
-    assert add(2, 2) == 4, "This assertion should fail!"
+# def test_intentionally_failing():
+#     """This test is designed to fail."""
+#     print("Running intentionally failing test...")  # Add print to see in output
+#     assert add(2, 2) == 5, "This assertion should fail!"
