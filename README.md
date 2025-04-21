@@ -6,7 +6,9 @@ It contains:
 
 - Basic calculator functions (`calculator.py`).
 - Unit tests using `pytest` (`tests/test_calculator.py`).
-- Minimal configuration files.
+- Project configuration using Poetry (`pyproject.toml`).
+- Linting and formatting with Ruff.
+- Task automation with a Makefile.
 
 ## Purpose
 
@@ -21,21 +23,26 @@ The primary goal of this repository is to provide a public, easily accessible co
 
 ## Setup
 
-1.  Clone the repository (no special authentication needed as it's public).
-2.  Create a virtual environment (optional but recommended):
-    ```bash
-    python -m venv venv
-    source venv/bin/activate # On Windows use `venv\Scripts\activate`
-    ```
-3.  Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+1. Clone the repository (no special authentication needed as it's public).
+2. Install Poetry if you don't have it already:
+   ```bash
+   curl -sSL https://install.python-poetry.org | python3 -
+   ```
+3. Install project dependencies:
+   ```bash
+   make install
+   ```
+   Alternatively, you can run:
+   ```bash
+   poetry install
+   ```
 
-## Running Tests
+## Available Commands
 
-To run the unit tests, execute the following command from the root directory:
+The project uses a Makefile to simplify common tasks:
 
-```bash
-pytest
-```
+- `make install`: Install all project dependencies
+- `make lint`: Run linting checks on the codebase
+- `make format`: Apply automatic formatting to the codebase
+- `make test`: Run the test suite
+- `make all`: Run install, lint, and test in sequence
