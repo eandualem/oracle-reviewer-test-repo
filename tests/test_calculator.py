@@ -1,6 +1,6 @@
 import pytest
 
-from calculator import add, describe_operation, divide, multiply, power, subtract
+from calculator import add, describe_operation, divide, multiply, power, square, subtract
 
 
 def test_add():
@@ -60,3 +60,11 @@ def test_power():
     assert power(0, 0) == 1
     assert power(1, 1) == 1
     assert power(2, 0) == 1
+
+
+def test_square():
+    """Test the square function."""
+    assert square(2) == 4
+    assert square(0) == 0
+    assert square(1) == 1
+    assert square(-1) == 1

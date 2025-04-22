@@ -37,6 +37,11 @@ def power(x: float, y: float) -> float:
     return x**y
 
 
+def square(x: float) -> float:
+    """Squares the number."""
+    return x * x
+
+
 # Example of a slightly too long line for linters
 def describe_operation(op_name: str, num1: float, num2: float, result: float) -> str:
     """Provides a string description of the operation performed."""
