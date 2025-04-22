@@ -1,6 +1,6 @@
 import pytest
 
-from calculator import add, describe_operation, divide, multiply, subtract
+from calculator import add, describe_operation, divide, multiply, power, subtract
 
 
 def test_add():
@@ -52,3 +52,11 @@ def test_describe_operation():
     desc = describe_operation("multiply", 12345.67, 89101.11, 1100000000)
     assert "Performed operation 'multiply'" in desc  # Basic check
     assert "1100000000" in desc  # Check for the result
+
+
+def test_power():
+    """Test the power function."""
+    assert power(2, 3) == 8
+    assert power(0, 0) == 1
+    assert power(1, 1) == 1
+    assert power(2, 0) == 1
