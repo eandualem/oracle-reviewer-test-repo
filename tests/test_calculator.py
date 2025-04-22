@@ -51,3 +51,4 @@ def test_describe_operation():
     # Check the potentially long line output
     desc = describe_operation("multiply", 12345.67, 89101.11, 1100000000)
     assert "Performed operation 'multiply'" in desc  # Basic check
+    assert "1100000000" in desc  # Check for the result
