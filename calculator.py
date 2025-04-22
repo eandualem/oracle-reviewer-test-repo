@@ -32,11 +32,6 @@ def divide(x: float, y: float) -> float:
     return x / y
 
 
-def power(x: float, y: float) -> float:
-    """Raises the first number to the power of the second."""
-    return x**y
-
-
 # Example of a slightly too long line for linters
 def describe_operation(op_name: str, num1: float, num2: float, result: float) -> str:
     """Provides a string description of the operation performed."""
