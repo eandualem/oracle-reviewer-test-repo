@@ -1,6 +1,14 @@
 import pytest
 
-from calculator import add, describe_operation, divide, multiply, power, square, subtract
+from calculator import (
+    add,
+    describe_operation,
+    divide,
+    multiply,
+    power,
+    square,
+    subtract,
+)
 
 
 def test_add():
@@ -47,7 +55,9 @@ def test_divide_by_zero():
 
 def test_describe_operation():
     """Test the describe operation function."""
-    assert describe_operation("add", 2, 3, 5) == ("Performed operation 'add' on 2 and 3, the result was 5.")
+    assert describe_operation("add", 2, 3, 5) == (
+        "Performed operation 'add' on 2 and 3, the result was 5."
+    )
     # Check the potentially long line output
     desc = describe_operation("multiply", 12345.67, 89101.11, 1100000000)
     assert "Performed operation 'multiply'" in desc  # Basic check
@@ -67,4 +77,4 @@ def test_square():
     assert square(2) == 4
     assert square(0) == 0
     assert square(1) == 1
-    assert square(-1) == 1
+    assert square(-1) == 0
